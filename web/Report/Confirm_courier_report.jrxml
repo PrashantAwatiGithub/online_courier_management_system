@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Confirm_courier_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8a685c8-71a3-4568-a629-9a22c5683eb2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tracking.`id` AS tracking_id,
+     tracking.`consignmentno` AS tracking_consignmentno,
+     tracking.`bookingdate` AS tracking_bookingdate,
+     tracking.`bookingmode` AS tracking_bookingmode,
+     tracking.`weight` AS tracking_weight,
+     tracking.`quantity` AS tracking_quantity,
+     tracking.`parceltype` AS tracking_parceltype,
+     tracking.`price` AS tracking_price,
+     tracking.`branchid` AS tracking_branchid,
+     tracking.`address` AS tracking_address,
+     tracking.`date` AS tracking_date,
+     tracking.`status` AS tracking_status,
+     tracking.`user_id` AS tracking_user_id
+FROM
+     `tracking` tracking]]>
+	</queryString>
+	<field name="tracking_id" class="java.lang.Integer"/>
+	<field name="tracking_consignmentno" class="java.lang.String"/>
+	<field name="tracking_bookingdate" class="java.lang.String"/>
+	<field name="tracking_bookingmode" class="java.lang.String"/>
+	<field name="tracking_weight" class="java.lang.String"/>
+	<field name="tracking_quantity" class="java.lang.String"/>
+	<field name="tracking_parceltype" class="java.lang.String"/>
+	<field name="tracking_price" class="java.lang.String"/>
+	<field name="tracking_branchid" class="java.lang.String"/>
+	<field name="tracking_address" class="java.lang.String"/>
+	<field name="tracking_date" class="java.lang.String"/>
+	<field name="tracking_status" class="java.lang.String"/>
+	<field name="tracking_user_id" class="java.lang.Integer"/>
+	<group name="tracking_id">
+		<groupExpression><![CDATA[$F{tracking_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="c1ffb0a8-4481-4157-8b56-f7f96bf58dae"/>
+				<text><![CDATA[tracking_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="0" width="61" height="20" uuid="cbb8b253-c41d-4fe5-8cfe-d8cfa75865df"/>
+				<text><![CDATA[tracking_consignmentno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="61" height="20" uuid="543413c6-8c40-4609-be15-48a545e657a1"/>
+				<text><![CDATA[tracking_bookingdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="61" height="20" uuid="15909379-55ae-472e-a02e-2afa649e4061"/>
+				<text><![CDATA[tracking_bookingmode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="61" height="20" uuid="7529c671-2de6-47e6-9717-749520da5d77"/>
+				<text><![CDATA[tracking_weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="61" height="20" uuid="5e487d77-0cd4-4d4d-9fc5-18f7201ca720"/>
+				<text><![CDATA[tracking_quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="61" height="20" uuid="70cd0718-185b-45d9-94df-b07fa82e869b"/>
+				<text><![CDATA[tracking_parceltype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="61" height="20" uuid="82e8b2ef-7a13-4cfd-b12d-da213f833120"/>
+				<text><![CDATA[tracking_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="61" height="20" uuid="8f784250-9aa8-4158-a891-1144c04d9a06"/>
+				<text><![CDATA[tracking_branchid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="0" width="61" height="20" uuid="90cbf387-1ed8-4918-906e-5b3a4bf7e3ab"/>
+				<text><![CDATA[tracking_address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="61" height="20" uuid="b7f26fb4-5667-49f3-85e5-6b02b267ee8a"/>
+				<text><![CDATA[tracking_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="0" width="61" height="20" uuid="11a2082b-0a2a-4676-9358-5d6f28d97575"/>
+				<text><![CDATA[tracking_status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="732" y="0" width="61" height="20" uuid="be1f34a1-fbac-4be1-8ad4-98ca75b22f59"/>
+				<text><![CDATA[tracking_user_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="073a8ece-f9c6-4a6d-a2b7-50e2d9c62f79"/>
+				<textFieldExpression><![CDATA[$F{tracking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="61" height="20" uuid="383f4d51-d777-496d-b497-900d76f5cb96"/>
+				<textFieldExpression><![CDATA[$F{tracking_consignmentno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="0" width="61" height="20" uuid="078457c8-6618-4f4f-bdc6-b0642905821f"/>
+				<textFieldExpression><![CDATA[$F{tracking_bookingdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="61" height="20" uuid="124cf1d6-9458-41ad-b3d1-ca600e3c50f6"/>
+				<textFieldExpression><![CDATA[$F{tracking_bookingmode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="61" height="20" uuid="88d38786-00d3-4ecd-9bba-ca054eaddeba"/>
+				<textFieldExpression><![CDATA[$F{tracking_weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="61" height="20" uuid="fcf4cef0-7531-473a-b0d6-1be7548f0b37"/>
+				<textFieldExpression><![CDATA[$F{tracking_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="61" height="20" uuid="f97194a6-8e81-4db3-b1ab-5c9fd09702d3"/>
+				<textFieldExpression><![CDATA[$F{tracking_parceltype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="61" height="20" uuid="69d147a7-73d0-4cd7-9ee5-edb873173718"/>
+				<textFieldExpression><![CDATA[$F{tracking_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="61" height="20" uuid="7c2ebde8-0826-4324-8e66-891d39162ad4"/>
+				<textFieldExpression><![CDATA[$F{tracking_branchid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="61" height="20" uuid="952f058b-442c-41bd-9c12-ce593b4e189b"/>
+				<textFieldExpression><![CDATA[$F{tracking_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="61" height="20" uuid="aeb351a6-9d4f-42fb-851f-23ec8303e559"/>
+				<textFieldExpression><![CDATA[$F{tracking_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="671" y="0" width="61" height="20" uuid="d57804e5-0123-48bc-9fba-3340d1fa4dd7"/>
+				<textFieldExpression><![CDATA[$F{tracking_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="0" width="61" height="20" uuid="b38d1ec0-9616-47da-a3bb-53ba16b744f9"/>
+				<textFieldExpression><![CDATA[$F{tracking_user_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

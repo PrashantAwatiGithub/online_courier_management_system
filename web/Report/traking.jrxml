@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="traking" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="227b6467-099d-4478-975e-61ee56e46cc7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tracking.`id` AS tracking_id,
+     tracking.`consignmentno` AS tracking_consignmentno,
+     tracking.`bookingdate` AS tracking_bookingdate,
+     tracking.`bookingmode` AS tracking_bookingmode,
+     tracking.`parceltype` AS tracking_parceltype,
+     tracking.`price` AS tracking_price,
+     tracking.`status` AS tracking_status,
+     tracking.`address` AS tracking_address
+FROM
+     `tracking` tracking]]>
+	</queryString>
+	<field name="tracking_id" class="java.lang.Integer"/>
+	<field name="tracking_consignmentno" class="java.lang.String"/>
+	<field name="tracking_bookingdate" class="java.lang.String"/>
+	<field name="tracking_bookingmode" class="java.lang.String"/>
+	<field name="tracking_parceltype" class="java.lang.String"/>
+	<field name="tracking_price" class="java.lang.String"/>
+	<field name="tracking_status" class="java.lang.String"/>
+	<field name="tracking_address" class="java.lang.String"/>
+	<group name="tracking_id">
+		<groupExpression><![CDATA[$F{tracking_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="14" width="459" height="53" uuid="eff12ccc-cc39-4262-97e1-da2e1513ca24"/>
+				<textElement textAlignment="Center">
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Online Courier Management]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="67" width="100" height="36" uuid="e36b792e-b8a5-439d-a2e2-e18ac40d8186"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Tracking]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="4874313b-c240-45f0-a104-ec38fc7467d0"/>
+				<text><![CDATA[Track Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="ce1d4828-95fb-45b4-b369-29d62bad1c3c"/>
+				<text><![CDATA[Consignment No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="21aed123-e84d-452f-b1b1-f0bc2a5a7da8"/>
+				<text><![CDATA[Booking Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="8a44c2e1-1701-431e-b3d9-481d88df1a96"/>
+				<text><![CDATA[Booking Mode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="cc63ee07-29d3-40c6-8817-f691151c375e"/>
+				<text><![CDATA[Pracel Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="fb73b321-3580-4c96-a4b3-b7572e09431b"/>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="20" uuid="19a7dbf6-3f58-480d-a054-6065cb904898"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="a45e6f34-39a3-43bb-a054-eebc18c17bf9"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="28" width="798" height="1" uuid="e7aa5347-2234-417d-af24-169bf618946a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9d48a044-5336-4180-b77d-8bfdfcfce26a"/>
+				<textFieldExpression><![CDATA[$F{tracking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="f67663dd-3326-4ca2-99ab-6f6c052a689a"/>
+				<textFieldExpression><![CDATA[$F{tracking_consignmentno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="c2e1babc-8e66-48b5-adae-dc57b8fcc549"/>
+				<textFieldExpression><![CDATA[$F{tracking_bookingdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="c920c822-2a25-4217-b090-a63ce10cdd75"/>
+				<textFieldExpression><![CDATA[$F{tracking_bookingmode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="e209214e-3eda-4c8b-a70e-0790ef6cb9c1"/>
+				<textFieldExpression><![CDATA[$F{tracking_parceltype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="453784ac-5601-43d3-b865-1779bee7f5e6"/>
+				<textFieldExpression><![CDATA[$F{tracking_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="654087a0-b121-48f5-8936-01b40f4a5bdb"/>
+				<textFieldExpression><![CDATA[$F{tracking_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="b81a0ffe-bda6-4da6-a004-0efc35a50b1a"/>
+				<textFieldExpression><![CDATA[$F{tracking_address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
